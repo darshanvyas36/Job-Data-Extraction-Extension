@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Job Extractor",
+    "version": "1.0",
+    "description": "Extracts specific content from LinkedIn job pages",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage",
+      "notifications"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": "icon16.jpg",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "icon16.jpg",
+      "48": "icon48.jpg",
+      "128": "icon128.jpg"
+    },
+    "host_permissions": [
+      "*://www.linkedin.com/*"
+    ],
+    
+    "content_security_policy": {
+      "script-src": "self 'unsafe-eval'; object-src 'self'"
+    }
+  }
+  
